@@ -1,0 +1,17 @@
+{
+  "name": "Bluesky Block Checker",
+  "short_name": "Block Checker",
+  "description": "Blueskyユーザーのブロックリストを確認します",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7f9fc",
+  "theme_color": "#0085FF",
+  "icons": [
+    {
+      "src": "image/icon.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

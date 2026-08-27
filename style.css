@@ -1,0 +1,58 @@
+/* スクロールバーのモダン化 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* ページ全体のフェードイン */
+body {
+    animation: smoothFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ステータスメッセージ等のフェードイン用クラス */
+.animate-fade-in {
+    animation: smoothFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* リストアイテムの連続フェードイン用クラス */
+.list-item-animate {
+    animation: slideUpFade 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* --- Keyframes --- */
+@keyframes smoothFadeIn {
+    0% { 
+        opacity: 0; 
+        transform: translateY(8px); 
+        filter: blur(2px); 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+        filter: blur(0); 
+    }
+}
+
+@keyframes slideUpFade {
+    0% { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
